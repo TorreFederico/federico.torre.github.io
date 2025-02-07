@@ -1,32 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Federico Torre</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Federico Torre</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Academic Projects</a></li>
-                <li><a href="experience.html">Work Experience</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Welcome to My Personal Website</h2>
-            <p>This is the homepage of my personal website where you can learn more about my academic and professional background.</p>
-            <p>Connect with me on <a href="https://www.linkedin.com/in/federico-torre/" target="_blank">LinkedIn</a>.</p>
-        </section>
-    </main>
-    <footer>
-        <p>Contact me at: <a href="mailto:federico.torre@mail.polimi.it">federico.torre@mail.polimi.it</a></p>
-    </footer>
-</body>
-</html>
+/* Reset base e stili comuni */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* Stili per l'intestazione */
+header {
+    background-color: #282c34;
+    color: white;
+    padding: 10px 5%;
+    text-align: center;
+}
+
+/* Stili per la navigazione */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Stili per il contenuto principale */
+main {
+    text-align: left;
+    padding: 20px 5%;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 960px;
+}
+
+/* Stili per il piè di pagina */
+footer {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Stili per titoli e sottotitoli */
+h1, h2, h3 {
+    color: #2C3E50;
+}
+
+/* Stili per le liste */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header, footer, main {
+        padding: 10px;
+    }
+
+    nav ul {
+        font-size: 14px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}

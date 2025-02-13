@@ -4,7 +4,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
+    background-color: #f0f2f5; /* Default background color for all pages except home */
     color: #333;
     display: flex;
     flex-direction: column;
@@ -12,11 +12,10 @@ body, html {
     align-items: center;
 }
 
-.about-background {
+/* Specific home page background style */
+.home-background {
     background: url('images/space-background.jpg') no-repeat center center fixed;
     background-size: cover;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
 }
 
 header {
@@ -51,9 +50,9 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 main {
-    text-align: center; /* Centering text */
+    text-align: center; /* Centering text for clarity and consistency */
     padding: 20px;
-    background: transparent; /* Clear background for main content */
+    background: transparent; /* No background to allow global style to show through */
     box-shadow: none;
     margin: auto;
     max-width: 960px;

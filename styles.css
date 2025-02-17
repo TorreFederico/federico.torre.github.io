@@ -4,19 +4,10 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5; /* Neutral background color for non-home pages */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-/* Specific style for the home page background */
-.home-background {
-    background: url('images/space-background.jpg') no-repeat center center fixed;
-    background-size: contain; /* Adjust background size to prevent excessive zoom */
-    color: #fff; /* Change text color to white for better visibility */
-    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8); /* Text shadow for readability */
 }
 
 header {
@@ -51,12 +42,25 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 main {
-    text-align: center; /* Center text for clarity */
     padding: 20px;
-    background: transparent; /* Clear background to show page-specific styles */
-    box-shadow: none;
-    margin: auto;
-    max-width: 960px;
+    width: 100%; /* Ensures that the main content area is full width */
+    align-items: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.gallery img {
+    width: 100%; /* Adjusts the width of the images to their container */
+    max-width: 200px; /* Sets a maximum width for each image */
+    height: auto; /* Maintains the aspect ratio */
+    margin: 10px; /* Provides space around each image */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional shadow for depth */
 }
 
 footer {
@@ -71,7 +75,7 @@ footer {
 
 /* Responsive design adjustments */
 @media (max-width: 768px) {
-    header, footer, main {
+    header, footer, main, .gallery img {
         padding: 10px;
     }
 

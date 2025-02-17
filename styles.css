@@ -1,90 +1,55 @@
-/* Base styles and common elements */
-body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f2f5;
-}
-
-header {
-    background-color: #282c34;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    width: 100%;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-nav ul li a:hover, nav ul li a:focus {
-    color: #005699;
-    text-decoration: underline;
-}
-
-main {
-    flex: 1;
-    width: 90%; /* Limits the width of the main content */
-    max-width: 1200px; /* Ensures main content does not stretch too wide on larger screens */
-    margin: 20px auto; /* Centers the main content and adds vertical space */
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    background: #ffffff;
+.gallery img {
+    width: 19%; /* Adjusted for five images */
+    height: auto;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .gallery {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
-.gallery img {
-    flex: 1 1 200px; /* Allows the image to grow and shrink with the size of the gallery while maintaining a base size */
-    max-width: 100%; /* Ensures images do not overflow their container */
-    margin: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    height: auto;
+#electric-propulsion, #cad-model {
+    background: rgba(255, 255, 255, 0.8);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-footer {
-    background-color: #282c34;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    position: relative;
+h2 {
+    color: #004d99; /* Dark blue for section titles */
 }
 
-/* Responsive design adjustments */
+/* Enhancements for visual clarity */
+p, li {
+    line-height: 1.6;
+    color: #333;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments for better viewing on smaller screens */
 @media (max-width: 768px) {
-    header, footer, main {
+    header, footer, main, .gallery img {
         padding: 10px;
     }
 
     nav ul li {
         display: block;
-        margin: 5px auto; /* Centers navigation items on smaller screens */
+        margin: 5px 0;
+    }
+
+    .gallery img {
+        width: 48%; /* Larger to be visible on small screens */
     }
 }
